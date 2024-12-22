@@ -1,0 +1,41 @@
+.site-nav {
+  background-color: map-get($colors, "primary");
+  padding: map-get($spacing, "sm") 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .nav-content {
+    @include container;
+    @include flex-center;
+    justify-content: space-between;
+  }
+
+  .logo a {
+    color: map-get($colors, "white");
+    text-decoration: none;
+    font-size: map-get($font-sizes, "2xl");
+    font-weight: bold;
+
+    &:hover {
+      color: map-get($colors, "accent");
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: map-get($spacing, "md");
+    list-style: none;
+
+    a {
+      color: map-get($colors, "white");
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: map-get($colors, "accent");
+      }
+    }
+  }
+}

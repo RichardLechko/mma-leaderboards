@@ -1,11 +1,78 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const divisions = [
+  "flyweight",
+  "bantamweight",
+  "featherweight",
+  "lightweight",
+  "welterweight",
+  "middleweight",
+  "light-heavyweight",
+  "heavyweight",
+];
+
+const formatDivisionName = (division: string) => {
+  return division
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
 ---
 
 <Layout>
-	<Welcome />
+  <main class="home-page">
+    <header class="home-header">
+      <h1>MMA Weight Divisions</h1>
+      <p>
+        Welcome to the MMA leaderboards. Explore the rankings of fighters across
+        various weight classes. Click on a division to view its top-ranked
+        fighters.
+      </p>
+    </header>
+
+    <section class="divisions-grid">
+      <h2>Weight Divisions</h2>
+      <ul>
+        {
+          divisions.map((division) => (
+            <li>
+              <a href={`/division/${division}`}>
+                {formatDivisionName(division)}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="info-section">
+      <h2>What is MMA?</h2>
+      <p>
+        Mixed Martial Arts (MMA) is a full-contact combat sport that allows the
+        use of both striking and grappling techniques. Fighters compete in
+        various weight classes, each focusing on different athletic strengths
+        and techniques.
+      </p>
+
+      <div class="info-subsection">
+        <h3>Why Explore Weight Divisions?</h3>
+        <p>
+          Understanding the weight divisions is essential for following the
+          sport. Fighters compete within their divisions to showcase their
+          skills and challenge for titles. Each division has its own set of
+          top-ranked fighters, showcasing different styles and strengths.
+        </p>
+      </div>
+
+      <div class="info-subsection">
+        <h3>How to Use This Site</h3>
+        <p>
+          Navigate through the divisions listed above to view detailed fighter
+          rankings, records, and achievements. Click on any division to access
+          the complete leaderboard and explore the top fighters.
+        </p>
+      </div>
+    </section>
+  </main>
 </Layout>

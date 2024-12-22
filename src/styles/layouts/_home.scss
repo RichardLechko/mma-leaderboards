@@ -1,0 +1,86 @@
+.home-page {
+  @include container;
+}
+
+.home-header {
+  @include card;
+  margin-top: map-get($spacing, "lg");
+  text-align: center;
+  margin-bottom: map-get($spacing, "lg");
+  background: linear-gradient(
+    135deg,
+    map-get($colors, "primary"),
+    darken(map-get($colors, "primary"), 10%)
+  );
+  color: map-get($colors, "white");
+
+  h1 {
+    font-size: map-get($font-sizes, "4xl");
+    margin-bottom: map-get($spacing, "sm");
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: map-get($font-sizes, "lg");
+  }
+}
+
+.divisions-grid {
+  @include card;
+  margin-bottom: map-get($spacing, "lg");
+
+  h2 {
+    @include section-title;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: map-get($spacing, "md");
+    list-style: none;
+
+    li a {
+      display: block;
+      padding: map-get($spacing, "md");
+      background-color: map-get($colors, "primary");
+      color: map-get($colors, "white");
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      text-align: center;
+      font-weight: 500;
+
+      &:hover {
+        background-color: map-get($colors, "accent");
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.info-section {
+  @include card;
+
+  h2 {
+    @include section-title;
+  }
+
+  h3 {
+    font-size: map-get($font-sizes, "xl");
+    color: map-get($colors, "primary");
+    margin-top: map-get($spacing, "lg");
+    margin-bottom: map-get($spacing, "sm");
+  }
+
+  p {
+    margin-bottom: map-get($spacing, "md");
+    line-height: 1.8;
+  }
+
+  .info-subsection {
+    margin-top: map-get($spacing, "lg");
+  }
+}

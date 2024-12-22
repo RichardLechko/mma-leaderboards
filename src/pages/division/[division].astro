@@ -1,0 +1,73 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import fighterData from "../../data/fighters.json";
+import "../../styles/main.scss";
+
+interface Fighter {
+  name: string;
+  rank: number;
+  record: string;
+}
+
+interface Divisions {
+  flyweight: Fighter[];
+  bantamweight: Fighter[];
+  featherweight: Fighter[];
+  lightweight: Fighter[];
+  welterweight: Fighter[];
+  middleweight: Fighter[];
+  "light-heavyweight": Fighter[];
+  heavyweight: Fighter[];
+}
+
+export function getStaticPaths() {
+  const divisions: Divisions = fighterData;
+
+  return Object.entries(divisions).map(([division, fighters]) => ({
+    params: { division },
+    props: { fighters },
+  }));
+}
+
+const { division } = Astro.params;
+const { fighters } = Astro.props;
+
+const formattedDivision = division
+  ? division
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ")
+  : "";
+
+// Function to format fighter name for URL
+const formatNameForUrl = (name: string) => {
+  return name.toLowerCase().replace(/\s+/g, "-");
+};
+---
+
+<Layout title={`${formattedDivision} Division Rankings`}>
+  <main class="division-rankings">
+    <h1>{formattedDivision} Division Rankings</h1>
+
+    {
+      fighters && fighters.length > 0 ? (
+        <ul>
+          {fighters.map((fighter: Fighter) => (
+            <li>
+              <strong>#{fighter.rank + 1}</strong>
+              <a
+                href={`https://www.ufc.com/athlete/${formatNameForUrl(fighter.name)}`}
+                target="_blank"
+              >
+                {fighter.name}
+              </a>
+              <span>({fighter.record})</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No rankings available for this division.</p>
+      )
+    }
+  </main>
+</Layout>

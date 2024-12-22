@@ -1,0 +1,47 @@
+.division-rankings {
+  @include container;
+
+  h1 {
+    @include section-title;
+    text-align: center;
+  }
+
+  ul {
+    @include card;
+    list-style: none;
+
+    li {
+      padding: map-get($spacing, "sm");
+      border-bottom: 1px solid map-get($colors, "border");
+      @include flex-center;
+      justify-content: flex-start;
+      gap: map-get($spacing, "sm");
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      strong {
+        color: map-get($colors, "accent");
+        font-size: map-get($font-sizes, "xl");
+        min-width: 50px;
+      }
+
+      a {
+        color: map-get($colors, "text");
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-right: auto;
+
+        &:hover {
+          color: map-get($colors, "accent");
+        }
+      }
+
+      span {
+        color: map-get($colors, "text");
+        opacity: 0.8;
+      }
+    }
+  }
+}

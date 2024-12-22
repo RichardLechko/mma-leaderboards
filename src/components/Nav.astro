@@ -1,0 +1,20 @@
+---
+const navItems = [{ name: "Home", path: "/" }];
+---
+
+<nav class="site-nav">
+  <div class="nav-content">
+    <div class="logo">
+      <a href="/">MMA Rankings</a>
+    </div>
+    <ul class="nav-links">
+      {
+        navItems.map((item) => (
+          <li>
+            <a href={item.path}>{item.name}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
