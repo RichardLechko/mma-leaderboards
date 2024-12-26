@@ -7,6 +7,7 @@ interface Fighter {
   name: string;
   rank: number;
   record: string;
+  nickname?: string;
 }
 
 interface Divisions {
@@ -53,15 +54,32 @@ const formatNameForUrl = (name: string) => {
       fighters && fighters.length > 0 ? (
         <ul>
           {fighters.map((fighter: Fighter) => (
-            <li>
-              <strong>#{fighter.rank + 1}</strong>
-              <a
-                href={`https://www.ufc.com/athlete/${formatNameForUrl(fighter.name)}`}
-                target="_blank"
-              >
-                {fighter.name}
-              </a>
-              <span>({fighter.record})</span>
+            <li
+              class={
+                fighter.rank === 0
+                  ? "champion"
+                  : fighter.rank <= 2
+                    ? "top-contenders"
+                    : "standard"
+              }
+            >
+              <strong>
+                {fighter.rank === 0 ? "Champion" : `#${fighter.rank + 1}`}
+              </strong>
+              <div class="fighter-name-and-record">
+                <a
+                  href={`https://www.ufc.com/athlete/${formatNameForUrl(fighter.name)}`}
+                  target="_blank"
+                >
+                  {fighter.name}
+                </a>
+                {fighter.rank === 0 && (
+                  <span class="fighter-record"> ({fighter.record})</span>
+                )}
+              </div>
+              {fighter.rank === 0 && fighter.nickname && (
+                <span class="nickname"> "{fighter.nickname}"</span>
+              )}
             </li>
           ))}
         </ul>

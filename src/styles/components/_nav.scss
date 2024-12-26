@@ -1,5 +1,5 @@
 .site-nav {
-  background-color: map-get($colors, "primary");
+  background-color: map-get($colors, "nav-background");
   padding: map-get($spacing, "sm") 0;
   position: sticky;
   top: 0;
@@ -12,7 +12,7 @@
   }
 
   .logo a {
-    color: map-get($colors, "white");
+    color: map-get($colors, "text");
     text-decoration: none;
     font-size: map-get($font-sizes, "2xl");
     font-weight: bold;
@@ -28,7 +28,7 @@
     list-style: none;
 
     a {
-      color: map-get($colors, "white");
+      color: map-get($colors, "text");
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;

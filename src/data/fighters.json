@@ -1,20 +1,35 @@
 {
   "flyweight": [
-    { "name": "Alexandre Pantoja", "rank": 0, "record": "29-5" },
+    {
+      "name": "Alexandre Pantoja",
+      "rank": 0,
+      "record": "29-5",
+      "nickname": "The Cannibal"
+    },
     { "name": "Brandon Royval", "rank": 1, "record": "17-7-0" },
     { "name": "Brandon Moreno", "rank": 2, "record": "22-8-2" },
     { "name": "Amir Albazi", "rank": 3, "record": "17-2-0" },
     { "name": "Kai Kara-France", "rank": 4, "record": "25-11-0" }
   ],
   "bantamweight": [
-    { "name": "Merab Dvalishvili", "rank": 0, "record": "18-4" },
+    {
+      "name": "Merab Dvalishvili",
+      "rank": 0,
+      "record": "18-4",
+      "nickname": "The Machine"
+    },
     { "name": "Sean O'Malley", "rank": 1, "record": "18-2" },
     { "name": "Umar Nurmagomedov", "rank": 2, "record": "18-0" },
     { "name": "Petr Yan", "rank": 3, "record": "18-5" },
     { "name": "Cory Sandhagen", "rank": 4, "record": "17-5" }
   ],
   "featherweight": [
-    { "name": "Ilia Topuria", "rank": 0, "record": "16-0" },
+    {
+      "name": "Ilia Topuria",
+      "rank": 0,
+      "record": "16-0",
+      "nickname": "El Matador"
+    },
     { "name": "Alexander Volkanovski", "rank": 1, "record": "26-4" },
     { "name": "Max Holloway", "rank": 2, "record": "26-8" },
     { "name": "Diego Lopes", "rank": 3, "record": "26-6" },
@@ -28,28 +43,43 @@
     { "name": "Dustin Poirier", "rank": 4, "record": "30-9" }
   ],
   "welterweight": [
-    { "name": "Belal Muhammad", "rank": 0, "record": "24-3" },
+    {
+      "name": "Belal Muhammad",
+      "rank": 0,
+      "record": "24-3",
+      "nickname": "Remember The Name"
+    },
     { "name": "Leon Edwards", "rank": 1, "record": "22-4" },
     { "name": "Shavkat Rakhmonov", "rank": 2, "record": "19-0" },
     { "name": "Kamaru Usman", "rank": 3, "record": "20-4" },
     { "name": "Jack Della Maddalena", "rank": 4, "record": "17-2" }
   ],
   "middleweight": [
-    { "name": "Dricus du Plessis", "rank": 0, "record": "22-2" },
+    {
+      "name": "Dricus du Plessis",
+      "rank": 0,
+      "record": "22-2",
+      "nickname": "Stillknocks"
+    },
     { "name": "Sean Strickland", "rank": 1, "record": "29-6" },
     { "name": "Israel Adesanya", "rank": 2, "record": "24-4" },
     { "name": "Khamzat Chimaev", "rank": 3, "record": "14-0" },
     { "name": "Robert Whittaker", "rank": 4, "record": "27-8" }
   ],
   "light-heavyweight": [
-    { "name": "Alex Pereira", "rank": 0, "record": "12-2" },
+    {
+      "name": "Alex Pereira",
+      "rank": 0,
+      "record": "12-2",
+      "nickname": "Poatan"
+    },
     { "name": "Magomed Ankalaev", "rank": 1, "record": "20-1-1" },
     { "name": "Jiří Procházka", "rank": 2, "record": "30-5-1" },
     { "name": "Jamahal Hill", "rank": 3, "record": "12-2" },
     { "name": "Jan Blachowicz", "rank": 4, "record": "29-10-1" }
   ],
   "heavyweight": [
-    { "name": "Jon Jones", "rank": 0, "record": "28-1" },
+    { "name": "Jon Jones", "rank": 0, "record": "28-1", "nickname": "Bones" },
     { "name": "Tom Aspinall", "rank": 1, "record": "15-3" },
     { "name": "Ciryl Gane", "rank": 2, "record": "13-2" },
     { "name": "Alexander Volkov", "rank": 3, "record": "38-11" },

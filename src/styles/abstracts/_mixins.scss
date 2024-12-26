@@ -1,5 +1,5 @@
 @mixin card {
-  background: map-get($colors, "white");
+  background: map-get($colors, "card");
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: map-get($spacing, "md");
@@ -9,6 +9,10 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 map-get($spacing, "md");
+
+  @media (max-width: 320px) {
+    padding: 0 map-get($spacing, "xs");
+  }
 }
 
 @mixin flex-center {
@@ -19,7 +23,7 @@
 
 @mixin section-title {
   font-size: map-get($font-sizes, "3xl");
-  color: map-get($colors, "primary");
+  color: map-get($colors, "text");
   margin-bottom: map-get($spacing, "md");
   padding-bottom: map-get($spacing, "xs");
   border-bottom: 3px solid map-get($colors, "accent");

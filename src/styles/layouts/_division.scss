@@ -1,46 +1,128 @@
 .division-rankings {
-  @include container;
-
-  h1 {
-    @include section-title;
-    text-align: center;
-  }
-
   ul {
-    @include card;
-    list-style: none;
+    padding: 1rem;
+    background-color: map-get($colors, "card");
+    margin: 1rem;
+    border-radius: 8px;
 
     li {
-      padding: map-get($spacing, "sm");
-      border-bottom: 1px solid map-get($colors, "border");
-      @include flex-center;
-      justify-content: flex-start;
-      gap: map-get($spacing, "sm");
+      background-color: map-get($colors, "card");
+      width: 100%;
+      max-width: 296px;
+      margin: auto;
+      list-style-type: none;
+      font-family: "Teko";
 
-      &:last-child {
-        border-bottom: none;
-      }
+      &.champion {
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        background: linear-gradient(
+          135deg,
+          rgba(map-get($colors, "champion-bg-left"), 0.8),
+          rgba(map-get($colors, "champion-bg-right"), 0.8)
+        );
 
-      strong {
-        color: map-get($colors, "accent");
-        font-size: map-get($font-sizes, "xl");
-        min-width: 50px;
-      }
+        box-shadow: 0px 4px 4px rgba(255, 255, 224, 0.5);
 
-      a {
-        color: map-get($colors, "text");
-        text-decoration: none;
-        transition: color 0.3s ease;
-        margin-right: auto;
+        strong {
+          font-weight: 300;
+          justify-content: center;
+          display: flex;
+          text-decoration: underline;
+          font-size: map-get($font-sizes, "champion-and-contenders-font-size");
+          color: map-get($colors, "champion-title");
+          text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
 
-        &:hover {
-          color: map-get($colors, "accent");
+        .fighter-name-and-record {
+          display: flex;
+          justify-content: center;
+          column-gap: 1rem;
+          font-size: map-get($font-sizes, "champion-and-contenders-font-size");
+          a,
+          span {
+            text-decoration: none;
+            color: map-get($colors, "champion-text");
+          }
+        }
+
+        .nickname {
+          display: flex;
+          justify-content: center;
+          font-style: italic;
+          font-size: map-get($font-sizes, "champion-nickname");
+          text-shadow: 0 4px 4px rgba(75, 75, 75, 1);
         }
       }
 
-      span {
-        color: map-get($colors, "text");
-        opacity: 0.8;
+      &.top-contenders {
+        border: map-get($colors, "top-contenders-border-thickness") solid
+          map-get($colors, "top-contenders-border");
+        background: map-get($colors, "top-contenders-bg");
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+
+        strong {
+          font-weight: 300;
+          font-size: map-get($font-sizes, "champion-and-contenders-font-size");
+          justify-self: start;
+          padding-left: 1rem;
+        }
+
+        .fighter-name-and-record {
+          text-align: center;
+          justify-self: center;
+
+          a,
+          span {
+            font-weight: 300;
+            text-decoration: none;
+            font-size: map-get(
+              $font-sizes,
+              "champion-and-contenders-font-size"
+            );
+            color: map-get($colors, "top-contenders-text");
+          }
+        }
+
+        &:nth-child(3) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &.standard {
+        display: grid;
+        grid-template-columns: auto 1fr; // Creates two columns - auto for rank, 1fr for name
+        gap: 1rem;
+        border: map-get($colors, "standard-border-thickness") solid
+          map-get($colors, "standard-border");
+        background: map-get($colors, "standard-bg");
+        position: relative; // Add this for positioning context
+
+        strong {
+          font-weight: 300;
+          font-size: map-get($font-sizes, "standard-text");
+          // Align rank to the left
+          justify-self: start;
+          padding-left: 1rem; // Add some padding from the left edge
+        }
+
+        .fighter-name-and-record {
+          // Center the name in its column
+          text-align: center;
+          justify-self: center;
+
+          a,
+          span {
+            font-weight: 300;
+            text-decoration: none;
+            font-size: map-get($font-sizes, "standard-text");
+            color: map-get($colors, "standard-text");
+          }
+        }
       }
     }
   }

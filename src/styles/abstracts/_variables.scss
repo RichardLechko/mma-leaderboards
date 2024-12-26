@@ -1,11 +1,31 @@
 // Colors
 $colors: (
+  "nav-background": #333333,
   "primary": #1a1a1a,
   "accent": #ff4136,
-  "text": #333,
-  "background": #f5f5f5,
+  "text": #f5f5f5,
+  "card": #1f1f1f,
+  "background": #0a0a0a,
   "white": #fff,
   "border": #eee,
+
+  "champion-bg-left": #ffd700,
+  "champion-bg-right": #ffa500,
+  "champion-border": #ffd700,
+  "champion-border-thickness": 1px,
+  "champion-title": #e2e8f0,
+  "champion-text": #000000,
+  "champion-bg": #ffffe0,
+
+  "top-contenders-bg": #2b2b2b,
+  "top-contenders-border": #c0c0c0,
+  "top-contenders-border-thickness": 1px,
+  "top-contenders-text": #ffffff,
+
+  "standard-bg": #1f1f1f,
+  "standard-text": #e2e8f0,
+  "standard-border": #4b4b4b,
+  "standard-border-thickness": 1px,
 );
 
 // Spacing
@@ -27,6 +47,9 @@ $font-sizes: (
   "2xl": 1.5rem,
   "3xl": 1.875rem,
   "4xl": 2.25rem,
+  "champion-and-contenders-font-size": 32px,
+  "champion-nickname": 28px,
+  "standard-text": 28px,
 );
 
 // Breakpoints
