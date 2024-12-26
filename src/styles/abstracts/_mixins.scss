@@ -3,12 +3,17 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: map-get($spacing, "md");
+
+  @media (max-width: 320px) {
+    width: 296px;
+    margin: map-get($spacing, "lg") auto map-get($spacing, "lg") auto;
+  }
 }
 
 @mixin container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 map-get($spacing, "md");
+  width: 100%;
 
   @media (max-width: 320px) {
     padding: 0 map-get($spacing, "xs");

@@ -1,4 +1,14 @@
 .division-rankings {
+  a {
+    text-decoration: underline;
+  }
+  h1 {
+    margin: 2rem auto 2rem auto;
+    text-align: center;
+    width: 296px;
+    white-space: nowrap;
+    font-size: 5cqw;
+  }
   ul {
     padding: 1rem;
     background-color: map-get($colors, "card");
@@ -41,7 +51,6 @@
           font-size: map-get($font-sizes, "champion-and-contenders-font-size");
           a,
           span {
-            text-decoration: none;
             color: map-get($colors, "champion-text");
           }
         }
@@ -62,7 +71,7 @@
 
         display: grid;
         grid-template-columns: auto 1fr;
-        gap: 1rem;
+
         padding: 0.5rem 0rem 0.5rem 0rem;
 
         strong {
@@ -79,7 +88,6 @@
           a,
           span {
             font-weight: 300;
-            text-decoration: none;
             font-size: map-get(
               $font-sizes,
               "champion-and-contenders-font-size"
@@ -95,30 +103,27 @@
 
       &.standard {
         display: grid;
-        grid-template-columns: auto 1fr; // Creates two columns - auto for rank, 1fr for name
+        grid-template-columns: auto 1fr;
         gap: 1rem;
         border: map-get($colors, "standard-border-thickness") solid
           map-get($colors, "standard-border");
         background: map-get($colors, "standard-bg");
-        position: relative; // Add this for positioning context
+        position: relative;
 
         strong {
           font-weight: 300;
           font-size: map-get($font-sizes, "standard-text");
-          // Align rank to the left
           justify-self: start;
-          padding-left: 1rem; // Add some padding from the left edge
+          padding-left: 1rem;
         }
 
         .fighter-name-and-record {
-          // Center the name in its column
           text-align: center;
           justify-self: center;
 
           a,
           span {
             font-weight: 300;
-            text-decoration: none;
             font-size: map-get($font-sizes, "standard-text");
             color: map-get($colors, "standard-text");
           }
