@@ -52,10 +52,26 @@ $font-sizes: (
   "standard-text": 28px,
 );
 
+$widths: (
+  "width": 296px,
+);
+
 // Breakpoints
 $breakpoints: (
   "sm": 640px,
   "md": 768px,
   "lg": 1024px,
   "xl": 1280px,
+);
+
+$breakpoint-widths: (
+  320: 296px,
+  375: 330px,
+  425: 380px,
+  640: 580px,
+  768: 700px,
+  1024: 940px,
+  1440: 1320px,
+  1920: 1800px,
+  2560: 2400px,
 );

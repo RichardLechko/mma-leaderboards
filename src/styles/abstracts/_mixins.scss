@@ -2,11 +2,13 @@
   background: map-get($colors, "card");
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  padding: map-get($spacing, "md");
+  padding: map-get($spacing, "sm");
+  margin: map-get($spacing, "lg") auto map-get($spacing, "lg") auto;
 
-  @media (max-width: 320px) {
-    width: 296px;
-    margin: map-get($spacing, "lg") auto map-get($spacing, "lg") auto;
+  @each $breakpoint, $width in $breakpoint-widths {
+    @media (min-width: #{$breakpoint}px) {
+      width: $width;
+    }
   }
 }
 

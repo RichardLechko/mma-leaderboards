@@ -1,17 +1,8 @@
-// Abstracts
 @import "abstracts/variables";
 @import "abstracts/mixins";
-@import "abstracts/functions";
 
-// Base
 @import "base/reset";
-@import "base/typography";
 
-// Components
 @import "components/nav";
-@import "components/header";
-@import "components/cards";
-
-// Layouts
 @import "layouts/division";
 @import "layouts/home";
